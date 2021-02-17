@@ -11,12 +11,7 @@ const generateNewURLStub = (length = 6) => {
   return Array(length) // array of size of length variable
   .fill(0) // fill with values to iterate
   // for each item in array, get a random value from the seedCharacters string
-  .map(() => seedCharacters[
-    Math.min(
-      getRandomArbitrary(0, seedCharacters.length),
-      seedCharacters.length - 1 // handle long-shot edge-case of Math.random returning 1.000000
-    )
-  ])
+  .map(() => seedCharacters[getRandomArbitrary(0, seedCharacters.length)])
   // join them into a string
   .join('');
 }
