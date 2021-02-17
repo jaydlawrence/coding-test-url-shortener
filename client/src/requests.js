@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000/urls'
+import { API_URL } from '../config'
 
 export const addURLGetStub = async (url) => {
   const {data: {id}} = await axios.post(
