@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
 import { isURL } from '../../utils';
@@ -6,7 +7,9 @@ import { NewURLWithCopy } from '../NewUrlWithCopy';
 import { Container, Input, Loading } from './styles';
 import { addURLGetStub } from '../../requests';
 
-export const ShortenForm = () => {
+export const ShortenForm = ({
+  getURLFunction
+}) => {
   const [url, setUrl] = useState('');
   const [formError, setFormError] = useState(null);
   const [shortURL, setShortURL] = useState(null);
@@ -24,7 +27,7 @@ export const ShortenForm = () => {
     }
     setIsLoading(true)
     try {
-      const stub = await addURLGetStub(url);
+      const stub = await getURLFunction(url);
       if (!stub) {
         throw new Error('couldn\t get stub');
       }
@@ -57,5 +60,12 @@ export const ShortenForm = () => {
       }
     </Container>
   );
-  
+}
+
+ShortenForm.propTypes = {
+  getURLFunction: PropTypes.func,
+}
+
+ShortenForm.default = {
+  getURLFunction: addURLGetStub
 }
