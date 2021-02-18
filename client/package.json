@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "ci:test": "CI=TRUE react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +45,8 @@
     ]
   },
   "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+    "enzyme": "^3.11.0",
     "eslint": "^7.20.0",
     "eslint-plugin-react": "^7.22.0"
   }

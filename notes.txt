@@ -1,0 +1,13 @@
+The instructions for installing and running this project have been placed in the README.md
+
+A quick summary:
+This project requires `docker` and `docker-compose`.
+Once they are installed and docker is running, use the make file to set up the project.
+
+`make setup` to build and set up the containers
+
+`make server` to run the server
+
+`make test` to run the tests
+
+`make help` to see other options

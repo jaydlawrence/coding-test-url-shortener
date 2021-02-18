@@ -33,7 +33,7 @@ export const ShortenForm = ({
       }
       setShortURL(`${window.location.href}${stub}`);
     } catch(e) {
-      formError('There was an error with creating short URL');
+      setFormError('There was an error with creating short URL');
     }
     setIsLoading(false);
   }
@@ -66,6 +66,6 @@ ShortenForm.propTypes = {
   getURLFunction: PropTypes.func,
 }
 
-ShortenForm.default = {
+ShortenForm.defaultProps = {
   getURLFunction: addURLGetStub
 }

@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import logo from './logo.svg';
+import logo from './URL_shortener_logo.png';
 import './App.css';
 import { ShortenForm } from './components/ShortenForm';
 import { RedirectPage } from './components/RedirectPage';
