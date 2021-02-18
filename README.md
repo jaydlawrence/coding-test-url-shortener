@@ -1,6 +1,55 @@
 This was a coding exercise as part of an interview process.
 
+## Demo
 
+This is a quick demo of what this project looks like and how it works.
+
+![Demo recording](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/demo.gif?raw=true)
+
+A better view of the happy path view.
+
+![Happy Path Screenshot](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/happy-path.png?raw=true)
+
+And example bad URL validation.
+
+![Invalid URL Screenshot](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/happy-path.png?raw=true)
+
+## Running this project
+
+This project requires the following to be run:
+```
+docker
+docker-compose
+```
+
+Once these have been installed, the project can be run by doing the following:
+
+Build and setup the docker containers. This will need to be done each time a change is made to the code.
+```
+make setup
+```
+
+Run the server
+```
+make server
+```
+Optionally run it in the background in daemon mode
+```
+make server-daemon
+```
+To Stop the daemon version, run:
+```
+make stop
+```
+
+To run tests:
+```
+make test
+```
+
+Once the server is up and running, to access the website go to:
+
+[http://localhost:8080/](http://localhost:8080/)
 
 ## Instructions
 
@@ -42,3 +91,14 @@ To ensure consistency in the evaluation, our Engineering team uses a rubric to s
 * **Technical design** - Separation of concerns, adherence to certain 12 factor App principles, knowledge of backend frameworks, security concerns, etc. -- Note on the Database- We would like you to use a persistent datastore. 
   * Please be ready to speak to your technical choices during the face-to-face (video) interview, as well as how your design might need to change if the requirements change.
   * Curious about the “performance requirements” for this exercise? Your application should be able to handle at least 5 requests per second. During the on-site interview, you can talk about how you might change your design if the system had to scale beyond that
+
+## Time taken
+
+This is how long it took me to do the different parts
+
+
+* App initial version complete functionality - 5 hours
+* Dockerize - 1 hour
+* Tests - 3 hours
+* Makefile - 2 hours
+* Making it fancy™ - 1 hour
