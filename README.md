@@ -16,11 +16,23 @@ And example bad URL validation.
 
 ## Running this project
 
+### External Requirements
+
 This project requires the following to be run:
 ```
 docker
 docker-compose
 ```
+
+In addition, on Windows, to run Unix based docker containers, the Windows Subsystem for Linux 2 is required.
+
+https://docs.microsoft.com/en-gb/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package
+
+On a related note, when installing Docker on Windows, make sure to add the option for WSL2 components.
+
+![Docker Windows Installation Options](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/media/docker-windows-options.png?raw=true)
+
+### Using Makefile (Unix-based environments)
 
 Once these have been installed, the project can be run by doing the following:
 
@@ -51,7 +63,33 @@ Once the server is up and running, to access the website go to:
 
 [http://localhost:8080/](http://localhost:8080/)
 
-## Instructions
+### Using Docker Compose Directly (Windows Compatible)
+
+Build and setup the docker containers. This will need to be done each time a change is made to the code.
+
+```
+	docker-compose build
+	docker-compose run server sh -c "npm run db:migrate"
+```
+
+Run the server
+```
+docker-compose up
+```
+Optionally run it in the background in daemon mode
+```
+docker-compose up -d
+```
+To Stop the daemon version, run:
+```
+docker-compose stop
+```
+
+Once the server is up and running, to access the website go to:
+
+[http://localhost:8080/](http://localhost:8080/)
+
+## Coding Task Instructions
 
 Here are the instructions that I received:
 
