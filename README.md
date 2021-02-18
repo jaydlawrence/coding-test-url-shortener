@@ -138,4 +138,4 @@ npm start
 
 **NOTE:** Node 14 is recommended for running this project.
 
-The "Easy" way to switch to Node 14 is to have [nvm](https://github.com/nvm-sh/nvm) installed and run the command `nvm use` in a new terminal before running any `node` or `npm` commands in that terminal.
+The "Easy" way to switch to Node 14 is to have [nvm](https://github.com/nvm-sh/nvm) installed and run the command `nvm use` in a new terminal in the `client` or `server` directories before running any `node` or `npm` commands in that terminal.
