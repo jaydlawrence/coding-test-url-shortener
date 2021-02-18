@@ -68,8 +68,8 @@ Once the server is up and running, to access the website go to:
 Build and setup the docker containers. This will need to be done each time a change is made to the code.
 
 ```
-	docker-compose build
-	docker-compose run server sh -c "npm run db:migrate"
+docker-compose build
+docker-compose run server sh -c "npm run db:migrate"
 ```
 
 Run the server
