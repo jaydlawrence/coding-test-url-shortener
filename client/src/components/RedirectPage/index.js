@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from '@material-ui/lab';
 import { useParams } from "react-router-dom";
@@ -26,10 +26,7 @@ export const RedirectPage = ({
     }
   }
 
-  useEffect(async () => {
-    getAndRedirect();
-  }, [])
-
+  getAndRedirect();
   
   return (
     <Container>

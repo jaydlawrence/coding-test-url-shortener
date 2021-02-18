@@ -102,3 +102,40 @@ This is how long it took me to do the different parts
 * Tests - 3 hours
 * Makefile - 2 hours
 * Making it fancy™ - 1 hour
+
+
+## Development
+
+Developing inside of the docker containers can be a bit of a pain.
+
+For development, use the `docker-compose.local-dev.yml` file with docker compose to just bring up the DB and then you can run the `server` and `client` locally for faster development.
+
+In a terminal
+
+```
+docker-compose -f docker-compose.local-dev.yml up
+```
+
+In a different terminal for frontend dev
+
+```
+cd client
+npm install
+npm start
+```
+The local version of the frontend runs on port 3000
+eg. http://localhost:3000
+
+In a different terminal for frontend dev
+
+```
+cd server
+npm install
+## run migrations the first time to set up the DB structure
+npm db:migrate
+npm start
+```
+
+**NOTE:** Node 14 is recommended for running this project.
+
+The "Easy" way to switch to Node 14 is to have [nvm](https://github.com/nvm-sh/nvm) installed and run the command `nvm use` in a new terminal before running any `node` or `npm` commands in that terminal.
