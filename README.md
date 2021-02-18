@@ -164,7 +164,7 @@ npm start
 The local version of the frontend runs on port 3000
 eg. http://localhost:3000
 
-In a different terminal for frontend dev
+In a different terminal for backend dev
 
 ```
 cd server
