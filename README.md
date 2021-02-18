@@ -4,15 +4,15 @@ This was a coding exercise as part of an interview process.
 
 This is a quick demo of what this project looks like and how it works.
 
-![Demo recording](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/demo.gif?raw=true)
+![Demo recording](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/media/demo.gif?raw=true)
 
 A better view of the happy path view.
 
-![Happy Path Screenshot](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/happy-path.png?raw=true)
+![Happy Path Screenshot](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/media/happy-path.png?raw=true)
 
 And example bad URL validation.
 
-![Invalid URL Screenshot](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/happy-path.png?raw=true)
+![Invalid URL Screenshot](https://github.com/jaydlawrence/coding-test-url-shortener/blob/master/media/invalid-url.png?raw=true)
 
 ## Running this project
 
